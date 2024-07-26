@@ -467,7 +467,7 @@ class MainActivity : AppCompatActivity(), CountryAdapter.OnItemClickListener{
                 override fun run() {
                     if (gameOver == 0) {
                         displayNextQuestion()
-                        handler.postDelayed(this, 30000) // 20 seconds
+                        handler.postDelayed(this, 10000) // 20 seconds
                     }
                 }
             }
@@ -628,7 +628,7 @@ class MainActivity : AppCompatActivity(), CountryAdapter.OnItemClickListener{
     }
 
     private fun startCountdown() {
-        countDownTimer = object : CountDownTimer(30000, 1000) {
+        countDownTimer = object : CountDownTimer(10000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 if((millisUntilFinished / 1000).toString().length==1){
                     timerTextView!!.text = "00 : "+"0" + (millisUntilFinished / 1000).toString()
